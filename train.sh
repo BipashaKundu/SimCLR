@@ -9,8 +9,8 @@
 #SBATCH --output=%x_%j.out		# Output file
 #SBATCH --error=%x_%j.err		# Error file
 
-#SBATCH --mail-user=bk7944@g.rit.edu	# Slack username to notify
-#SBATCH --mail-type=END			# Type of slack notifications to send
+
+#SBATCH --mail-type=END			# Type of Slack notifications to send
 
 #SBATCH --time=3-00:00:00		# Time limit
 #SBATCH --ntasks=1		
