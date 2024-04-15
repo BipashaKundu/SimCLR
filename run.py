@@ -80,55 +80,11 @@ def main():
     
     
     print(f"Number of samples in dataset: {len(train_dataset)}")
-
-    # print("Type of train_dataset after all the transformations before dataloader",type(train_dataset))
-    # #sample data has to be the tuple
-   
-    # sample_data = train_dataset[1]
-    # print(sample_data)
-    
-    # img1=sample_data[0] #this has to be list 
-    # img2=sample_data[1]
-    
-    # print("Sample data type:", type(sample_data))
-    # print("Number of elements in sample data:", len(sample_data))
-   
-    # print("Type of img1:", type(img1))
-    # print("Length of img1:", len(img1))
-    # print("Contents of view1:", img1[0])
-    # print("contents of view2",img1[1])
-    
-
-    # print(" Unique elements if img[1] tensor", torch.unique(img1[1]))
-
-    # img1_np=img1[0]
-    # img1_np = img1_np.numpy()
-    # # # img1_np = (img1_np - img1_np.min()) / (img1_np.max() - img1_np.min())  # Normalize to [0, 1]
-    # img2_np=img2[0]
-    # img2_np = img2_np.numpy()
-    # img2_np = (img2_np - img2_np.min()) / (img2_np.max() - img2_np.min())  # Normalize to [0, 1]
-
-#     #Transpose the image dimensions from [C, H, W] to [H, W, C] for plotting
-#     img1_np = np.transpose(img1, (1, 2, 0))
-#     img2_np = np.transpose(img2, (1, 2, 0))
-
-# # Display the image
-#     plt.imshow(img1_np)
-#     plt.title("View 2")
-#     plt.savefig("/home/bk7944/segmentation/SimCLR/view1.jpg")
-#     plt.imshow(img2_np)
-#     plt.title("View 2")
-#     plt.savefig("/home/bk7944/segmentation/SimCLR/view2.jpg")
-    
-    
-        
+  
     train_loader = torch.utils.data.DataLoader(
         train_dataset, batch_size=args.batch_size, shuffle=True,
         num_workers=args.workers, pin_memory=True, drop_last=True)
-    
-    
-    # print("Number of batches",len(train_loader))
-    # print("Type of dataset after dataloader", type(train_loader))
+
     
     print('===============>.....Training model.... <================')
   
